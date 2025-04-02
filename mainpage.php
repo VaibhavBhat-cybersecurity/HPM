@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="english">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +8,17 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-image: url('./symbhos.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #333;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
+
         .navbar {
             background-color: #007bff;
             padding: 10px;
@@ -18,23 +26,34 @@
             justify-content: space-between;
             align-items: center;
         }
+
         .navbar h1 {
             color: #fff;
             margin: 0;
         }
+
         .search-bar input[type="text"] {
             padding: 5px;
             font-size: 16px;
             border-radius: 5px;
             border: 1px solid #ccc;
         }
+
         .container {
             text-align: center;
-            margin-top: 50px;
+            margin: auto;
+            padding: 20px; /* Added padding to increase visibility */
+            background-color: rgba(0, 0, 0, 0.3); /* Inserted Semi-transparent background  */
+            border-radius: 15px; 
         }
+
         h2 {
-            color: #333;
+            color:rgb(255, 255, 255); 
+            font-size: 36px; 
+            font-weight: bold; 
+            text-shadow: 2px 2px 6px #000;
         }
+
         .button {
             display: inline-block;
             margin: 10px;
@@ -47,6 +66,7 @@
             cursor: pointer;
             text-decoration: none;
         }
+
         .button:hover {
             background-color: #0056b3;
         }
@@ -56,9 +76,7 @@
 <div class="navbar">
     <h1>Hospital Management System</h1>
     <div class="search-bar">
-        <label>
-            <input type="text" placeholder="Search...">
-        </label>
+        <input type="text" placeholder="Search...">
     </div>
 </div>
 
@@ -71,14 +89,15 @@
 <script>
     document.getElementById('doctor-btn').addEventListener('click', function() {
         alert('Welcome, Doctor!');
-        // Here you can add a redirect to the doctor login page or dashboard
+        // redirect to the doctor login page //
     });
 
     document.getElementById('patient-btn').addEventListener('click', function() {
         alert('Welcome, Patient!');
-        // Here you can add a redirect to the patient login page or dashboard
+        // redirect to the patient login page //
     });
 </script>
+</body>
 
 <?php
 //connecting to a database
